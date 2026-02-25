@@ -1,4 +1,4 @@
-theme = "hugo-PaperMod"
+theme = "PaperMod"
 
 title = "My Blog"
 baseURL = "https://gabsteps.github.io/"
