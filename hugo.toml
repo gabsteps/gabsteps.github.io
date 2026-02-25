@@ -1,7 +1,7 @@
 theme = "PaperMod"
 
 title = "My Blog"
-baseURL = "https://gabsteps.github.io/"
+baseURL = "https://gabrielpassos.com/"
 languageCode = "en"
 
 [params]
