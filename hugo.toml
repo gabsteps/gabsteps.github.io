@@ -1,0 +1,20 @@
+theme = "hugo-PaperMod"
+
+title = "My Blog"
+baseURL = "https://gabsteps.github.io/"
+languageCode = "en"
+
+[params]
+  author = "Gabriel S Passos"
+  description = "Cybersecurity and Tech Blog"
+  defaultTheme = "dark"   # dark | light | auto
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
