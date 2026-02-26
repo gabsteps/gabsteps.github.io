@@ -13,8 +13,8 @@ languageCode = "en"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  customJS = ["js/typing.js"]
-  
+  googleAnalyticsID = "G-1QTPR27FK7"
+    
 [params.assets]
   favicon = "/favicon.ico"
   favicon16x16 = "/favicon-16x16.png"
