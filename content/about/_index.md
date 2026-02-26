@@ -19,3 +19,14 @@ Early development on my pentesting skills.
 
 <h2>Reverse Engineering</h2>
 I'm still exploring reverse engineering, but it seems interesting.
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1QTPR27FK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1QTPR27FK7');
+</script>

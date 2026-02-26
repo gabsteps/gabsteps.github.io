@@ -13,7 +13,6 @@ languageCode = "en"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  googleAnalyticsID = "G-1QTPR27FK7"
     
 [params.assets]
   favicon = "/favicon.ico"
