@@ -1,6 +1,6 @@
 theme = "PaperMod"
 
-title = "My Blog"
+title = "My Blog | Under Develpment"
 baseURL = "https://gabrielpassos.com/"
 languageCode = "en"
 
@@ -13,8 +13,33 @@ languageCode = "en"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-
+  customJS = ["js/typing.js"]
+  
+[params.assets]
+  favicon = "/favicon.ico"
+  favicon16x16 = "/favicon-16x16.png"
+  favicon32x32 = "/favicon-32x32.png"
+  apple_touch_icon = "/apple-touch-icon.png"
+	
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about/'
+    weight = 20
+  [[menus.main]]
+    name = 'Articles'
+    pageRef = '/articles/'
+    weight = 30
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact/'
+    weight = 30
