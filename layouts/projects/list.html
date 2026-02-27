@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="projects-grid">
+
+  {{ range .Pages }}
+  <div class="project-card">
+    
+    {{ if .Params.image }}
+      <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    {{ end }}
+    
+    <h3>{{ .Title }}</h3>
+
+    <div class="project-stack">
+      <span>{{ .Params.tech }}</span>
+    </div>
+
+    <p class="project-description">
+      {{ .Params.description }}
+    </p>
+
+    <a class="project-btn" href="{{ .RelPermalink }}">
+      Read more →
+    </a>
+
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}

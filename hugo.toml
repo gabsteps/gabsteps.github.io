@@ -1,6 +1,6 @@
 theme = "PaperMod"
 
-title = "My Blog | Under Develpment"
+title = "Gabriel S Passos"
 baseURL = "https://gabrielpassos.com/"
 languageCode = "en"
 
@@ -27,10 +27,6 @@ languageCode = "en"
 
 [menus]
   [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-  [[menus.main]]
     name = 'About'
     pageRef = '/about/'
     weight = 20
@@ -39,6 +35,11 @@ languageCode = "en"
     pageRef = '/articles/'
     weight = 30
   [[menus.main]]
+    name = 'My Projects'
+    pageRef = '/projects/'
+    weight = 40
+  [[menus.main]]
     name = 'Contact'
     pageRef = '/contact/'
-    weight = 30
+    weight = 50
+
