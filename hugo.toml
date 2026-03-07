@@ -16,10 +16,10 @@ languageCode = "en"
   ShowCodeCopyButtons = true
     
 [params.assets]
-  favicon = "/favicon.ico"
-  favicon16x16 = "/favicon-16x16.png"
-  favicon32x32 = "/favicon-32x32.png"
-  apple_touch_icon = "/apple-touch-icon.png"
+  favicon = "icons/favicon.ico"
+  favicon16x16 = "icons/favicon-16x16.png"
+  favicon32x32 = "icons/favicon-32x32.png"
+  apple_touch_icon = "icons/apple-touch-icon.png"
 	
 [markup]
   [markup.goldmark]
