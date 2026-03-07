@@ -1,0 +1,99 @@
+/* default layout css */
+
+.custom-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.custom-content h1 {
+  margin-top: 40px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.custom-content h2 {
+  margin-top: 40px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.custom-content h3 {
+  margin-top: 35px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.custom-content p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* lists */
+
+.custom-content ul,
+.custom-content ol {
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.custom-content li {
+  margin-bottom: 6px;
+}
+
+/* images */
+
+.custom-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 25px 0;
+}
+
+/* code blocks */
+
+.custom-content pre {
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 25px 0;
+}
+
+/* inline code */
+
+.custom-content code {
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* blockquotes */
+
+.custom-content blockquote {
+  border-left: 3px solid #444;
+  padding-left: 15px;
+  margin: 25px 0;
+  color: #bbb;
+}
+
+/* figure container */
+
+.custom-content figure {
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* image */
+
+.custom-content figure img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* caption */
+
+.custom-content figcaption {
+  font-size: 14px;
+  color: #888;
+  margin-top: 8px;
+}

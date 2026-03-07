@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<h1>Latest Posts</h1>
+
+<div class="posts-list">
+
+{{ range .Pages }}
+
+<div class="post-card">
+
+  <h2 class="post-title">
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h2>
+
+  <p class="post-summary">
+    {{ .Summary }}
+  </p>
+
+  {{ if .Params.tags }}
+  <div class="post-tags">
+    {{ range .Params.tags }}
+      <a class="post-tag" href="/tags/{{ . | urlize }}">
+        {{ . }}
+      </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="post-meta">
+    {{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min
+  </div>
+
+</div>
+
+{{ end }}
+
+</div>
+
+{{ end }}

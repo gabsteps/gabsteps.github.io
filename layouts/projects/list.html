@@ -3,16 +3,22 @@
 
   {{ range .Pages }}
   <div class="project-card">
-    
+
     {{ if .Params.image }}
       <img src="{{ .Params.image }}" alt="{{ .Title }}">
     {{ end }}
-    
+
     <h3>{{ .Title }}</h3>
 
-    <div class="project-stack">
-      <span>{{ .Params.tech }}</span>
+    {{ if .Params.tags }}
+    <div class="project-tags">
+      {{ range .Params.tags }}
+        <a class="project-tag" href="/tags/{{ . | urlize }}">
+          {{ . }}
+        </a>
+      {{ end }}
     </div>
+    {{ end }}
 
     <p class="project-description">
       {{ .Params.description }}

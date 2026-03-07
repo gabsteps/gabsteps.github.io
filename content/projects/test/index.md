@@ -1,6 +1,6 @@
 ---
 title: "Test Card"
-tech: "Python, sh, C, C++, GO, JavaScript"
+tags: ["Python", "sh", "C", "Go", "JavaScript"]
 description: "Testing some project cards."
 image: "/images/test.png"
 ---

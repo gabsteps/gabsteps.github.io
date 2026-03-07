@@ -7,7 +7,8 @@ languageCode = "en"
 [params]
   author = "Gabriel S Passos"
   description = "Cybersecurity and Tech Blog"
-  defaultTheme = "dark"   # dark | light | auto
+  defaultTheme = "dark"
+  disableThemeToggle = true
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -27,6 +28,10 @@ languageCode = "en"
 
 [menus]
   [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
     name = 'About'
     pageRef = '/about/'
     weight = 20
@@ -38,8 +43,4 @@ languageCode = "en"
     name = 'My Projects'
     pageRef = '/projects/'
     weight = 40
-  [[menus.main]]
-    name = 'Contact'
-    pageRef = '/contact/'
-    weight = 50
 
