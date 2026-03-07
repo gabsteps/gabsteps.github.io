@@ -10,6 +10,6 @@ tags: ["test", "general"]
 
 This is a test text.
 
-{{< figure src="test-image.png" caption="This is a test description about the image." >}}
+{{< figure src="images/test-image.png" caption="This is a test description about the image." >}}
 
 And this is the continuation of previous test text.
