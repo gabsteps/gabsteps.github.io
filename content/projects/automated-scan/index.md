@@ -2,9 +2,9 @@
 title: "Automated Scan"
 tech: "Python, sh"
 description: "Automated tool to scan targets and generate reports."
-image: "/images/project1.png"
+image: "/images/under_development.png"
 layout: "simple"
 tags: ["Python", "sh"]
 ---
 
-Details here (or not).
+This page is under development :)

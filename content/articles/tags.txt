@@ -1,8 +1,12 @@
+analysis
 automation
 general
+ghidra
 linux
+malware-analysis
 networking
 python
+reverse-engineering
 security
 tools
 web

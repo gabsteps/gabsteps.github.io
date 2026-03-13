@@ -6,7 +6,7 @@ languageCode = "en"
 
 [params]
   author = "Gabriel S Passos"
-  description = "Cybersecurity and Tech Blog"
+  description = "Cybersecurity blog about malware analysis, reverse engineering, security research and automation by Gabriel Passos"
   defaultTheme = "dark"
   disableThemeToggle = true
   ShowReadingTime = true
