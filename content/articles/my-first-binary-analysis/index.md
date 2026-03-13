@@ -35,6 +35,8 @@ Ghidra use these information to know how to read headers, load sections and loca
 
 This will generate a import results summary, and here we can already see some important information about our binary:
 
+{{< figure src="images/import_summary-1.png" link="images/import_summary-1.png" caption="Import Results Summary." >}}
+
 - Language ID: x86:LE:64:default
 - Processor: x86
 - Endian: little
@@ -59,9 +61,6 @@ Indicating that the program was compiled to run on Linux systems >= 3.2
 - ELF Source File
 
 Appears when the binary is compiled without stripping metadata. It reveals that the code was originally called 'hello_reverse.c' and it can give us some hints about its functioning.
-
-
-{{< figure src="images/import_summary-1.png" link="images/import_summary-1.png" caption="Import Results Summary." >}}
 
 
 
