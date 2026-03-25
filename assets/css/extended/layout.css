@@ -1,7 +1,7 @@
 /* default layout css */
 
 .custom-page {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -97,3 +97,15 @@
   color: #888;
   margin-top: 8px;
 }
+
+/* links */
+
+<style>
+a.link {
+    color: #1E90FF;
+    text-decoration: underline; 
+}
+a.link:hover {
+    color: #104E8B;
+}
+
