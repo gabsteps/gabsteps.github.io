@@ -9,6 +9,8 @@ tags: ["python", "html", "css"]
 
 <h1>Passive Recon Tool</h1>
 
+<p><strong>TL;DR:</strong> Passive OSINT pipeline that maps a domain’s attack surface without direct interaction, correlates multi-source data, and generates a structured risk-based security report.</p>
+
 {{< figure src="images/report-first-page.png" link="images/report-first-page.png" caption="Report First Page" >}}
 
 I developed a passive reconnaissance pipeline capable of mapping a target domain’s attack surface using only publicly available data (OSINT).
