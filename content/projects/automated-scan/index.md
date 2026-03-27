@@ -1,7 +1,7 @@
 ---
-title: "Automated Scan"
+title: "Passive Recoinaissance Pipeline"
 tech: "Python, sh"
-description: "Automated tool to scan targets and generate reports."
+description: "Multi-source OSINT pipeline with enrichment, correlation, and risk scoring"
 image: "/images/automated-report-project.png"
 layout: "simple"
 tags: ["python", "html", "css"]
@@ -11,9 +11,13 @@ tags: ["python", "html", "css"]
 
 {{< figure src="images/report-first-page.png" link="images/report-first-page.png" caption="Report First Page" >}}
 
-In this project, I developed a **passive reconnaissance tool** designed to collect, process, and analyze publicly available data (OSINT) from a target domain.
+I developed a passive reconnaissance pipeline capable of mapping a target domain’s attack surface using only publicly available data (OSINT).
 
-The goal is to transform scattered public information into a **structured security report**, helping identify potential risks without performing any active interaction with the target.
+Unlike traditional scanning approaches, this tool performs <strong>zero direct interaction with the target</strong>, eliminating detection risks while still providing meaningful security insights.
+
+The system aggregates data from multiple external sources, correlates findings, and transforms fragmented information into a structured and actionable security report.
+
+This project simulates a real-world reconnaissance phase used in penetration testing and attack surface analysis, focusing on scalability, automation, and low-noise information gathering.
 
 This approach ensures:
 
@@ -21,6 +25,32 @@ This approach ensures:
 * No legal or ethical risks
 * Real-world applicability in reconnaissance phases
 
+<h2>Technical Decisions</h2>
+
+Several design choices were made to ensure reliability, scalability, and data consistency:
+
+- <strong>VirusTotal (Passive DNS):</strong>  
+  Selected for historical DNS resolution data, allowing timeline-based infrastructure analysis and identification of IP reuse.  
+  The implementation deduplicates records and tracks first/last seen timestamps.
+
+- <strong>crt.sh (Certificate Transparency):</strong>  
+  Used to enumerate subdomains from SSL certificates, enabling discovery of hidden or legacy assets often missed by DNS-based methods.  
+  Wildcard certificates are handled separately to avoid noise.
+
+- <strong>Threaded Resolution (Concurrency):</strong>  
+  Subdomain and infrastructure validation use multithreading to significantly reduce execution time.
+
+- <strong>Data Normalization Layer:</strong>  
+  WHOIS data is normalized into a structured domain model to handle inconsistent formats across registrars.
+
+- <strong>Deduplication Strategy:</strong>  
+  DNS records, certificates, and subdomains are aggregated using key-based correlation to avoid redundant entries.
+
+- <strong>Resilience Handling:</strong>  
+  API failures and timeouts are handled, ensuring the pipeline continues execution even with partial data.
+
+- <strong>Modular Architecture:</strong>  
+  Each stage (collection, processing, enrichment, reporting) is isolated, enabling easy extension and maintenance.
 
 <h2>Objectives</h2>
 
@@ -49,24 +79,40 @@ This project explores important cybersecurity concepts:
 
 The tool follows a modular pipeline:
 
-```text
-Target Domain
-     ↓
-WHOIS Collection
-     ↓
-Passive DNS (VirusTotal)
-     ↓
-Subdomain Enumeration (crt.sh)
-     ↓
-Infrastructure Enrichment (IPInfo)
-     ↓
-Document Discovery (Wayback Machine)
-     ↓
-Metadata Analysis
-     ↓
-Risk Assessment
-     ↓
-HTML Report Generation
+{{< figure src="images/diagram.png" link="images/diagram.png" caption="Pipeline Diagram" >}}
+
+```
+                
+[Input Layer]
+    └── Target Domain
+
+[Collection Layer]
+    ├── WHOIS Collection
+    ├── Passive DNS (VirusTotal API)
+    ├── Certificate Transparency (crt.sh)
+    └── Wayback Machine (Document Discovery)
+
+[Processing Layer]
+    ├── Data Normalization (WHOIS parsing)
+    ├── Deduplication (DNS, certs, subs)
+    ├── Timeline Correlation (first_seen / last_seen)
+    └── Metadata Classification
+
+[Enrichment Layer]
+    ├── IP Intelligence (IPInfo API)
+    └── Active/Inactive Resolution (Threaded DNS lookup)
+
+[Analysis Layer]
+    ├── Subdomain Risk Detection (keyword-based)
+    ├── Metadata Exposure Analysis
+    ├── Infrastructure Sizing
+    └── Domain Lifecycle Analysis
+
+[Scoring Engine]
+    └── Weighted Risk Model (Low/Medium/High → Score → Average)
+
+[Output Layer]
+    └── HTML Report Generator
 ```
 
 <h2>External APIs Used</h2>
@@ -165,25 +211,64 @@ Documents may expose:
 * Sensitive metadata
 
 
-<h2>Risk Assessment</h2>
+<h2>Risk Assessment Model</h2>
 
-The tool includes a simple risk model based on:
+The tool implements a heuristic-based risk scoring system that evaluates multiple aspects of the target:
 
-* Domain expiration proximity
-* Suspicious subdomain naming
-* Volume of exposed documents
-* Infrastructure size
+- <strong>Domain Management:</strong>  
+  Based on expiration proximity and WHOIS completeness
+
+- <strong>Subdomain Exposure:<strong>  
+  Detection of sensitive naming patterns such as dev, test, admin, and internal
+
+- <strong>Metadata Exposure:</strong>  
+  Volume of publicly accessible documents and potential information leakage
+
+- <strong>Infrastructure Exposure:</strong>
+  Size and distribution of the identified infrastructure
 
 {{< figure src="images/risk-assessment.png" link="images/risk-assessment.png" caption="Risk Assessment Section" >}}
 
-Each category is classified as:
+Each category is classified as <strong>Low, Medium, or High</strong>, and assigned a numerical score:
 
-* Low
-* Medium
-* High
+* Low = 1  
+* Medium = 2  
+* High = 3  
 
-And combined into an <strong>overall risk score.</strong>
+The overall risk is calculated using an average-based scoring model:
 
+* ≥ 2.5 → High  
+* ≥ 1.5 → Medium  
+* < 1.5 → Low  
+
+This approach provides a simple but effective way to prioritize potential risks based on aggregated indicators.
+
+<h2>Results</h2>
+
+The tool successfully automates the reconnaissance workflow and produces a structured security report in a short time frame.
+
+Example outcomes include:
+
+- Identification of multiple subdomains through certificate transparency logs
+- Detection of active vs inactive assets via DNS resolution
+- Discovery of publicly accessible documents from archived sources
+- Correlation of infrastructure data (ASN, organization, geolocation)
+- Automated classification of risk across multiple categories
+
+Execution is optimized through concurrency, allowing multiple enrichment and validation tasks to run in parallel, significantly reducing total runtime.
+
+The final output is a comprehensive HTML report that consolidates all findings into a readable and actionable format.
+
+<h2>Limitations</h2>
+
+While effective, the tool has some limitations:
+
+- Relies on third-party APIs, which may introduce rate limits or incomplete data
+- Passive-only approach may miss assets not exposed through public sources
+- WHOIS data inconsistency across registrars can affect accuracy
+- Risk scoring is heuristic-based and does not replace manual analysis
+
+These limitations reflect real-world constraints of passive reconnaissance techniques.
 
 <h2>Output</h2>
 
@@ -199,6 +284,7 @@ The final output is an HTML report containing:
 
 
 <a href="/downloads/report.html" download class="link">Download HTML Report Example 🔗</a>
+
 
 <h2>Key Challenges</h2>
 
@@ -244,13 +330,16 @@ This tool operates strictly in a <strong>passive manner</strong>, meaning:
 
 <h2>Conclusion</h2>
 
-This project demonstrates how publicly available data can be leveraged to gain meaningful insights into a target's security posture.
+This project demonstrates how publicly available data can be systematically leveraged to map a target’s attack surface without active interaction.
 
-Even without active interaction, it is possible to:
+Beyond data collection, the focus was on building a structured pipeline capable of:
 
-* Map infrastructure
-* Identify exposure points
-* Assess potential risks
+- Correlating multiple OSINT sources
+- Reducing noise through normalization and deduplication
+- Automating analysis and reporting
+- Providing actionable security insights
+
+This work reflects my ability to design scalable reconnaissance workflows and think in terms of attack surface analysis, a critical component in modern cybersecurity operations.
 
 
 <h2>Repository</h2>
