@@ -220,7 +220,7 @@ The tool implements a heuristic-based risk scoring system that evaluates multipl
 - <strong>Domain Management:</strong>  
   Based on expiration proximity and WHOIS completeness
 
-- <strong>Subdomain Exposure:<strong>  
+- <strong>Subdomain Exposure:</strong>  
   Detection of sensitive naming patterns such as dev, test, admin, and internal
 
 - <strong>Metadata Exposure:</strong>  
