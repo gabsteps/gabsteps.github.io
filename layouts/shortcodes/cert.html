@@ -1,0 +1,16 @@
+<div class="cert-card">
+  <img src="{{ .Get "image" }}" alt="{{ .Get "title" }}">
+
+  <div class="cert-info">
+    <h3>{{ .Get "title" }}</h3>
+    <p class="cert-meta">{{ .Get "meta" }}</p>
+
+    <ul>
+      {{ range (split (.Get "items") "|") }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <a href="{{ .Get "link" }}" target="_blank">Verify Credential</a>
+  </div>
+</div>

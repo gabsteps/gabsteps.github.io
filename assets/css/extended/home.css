@@ -35,13 +35,47 @@
 
 .social-icons {
   display: flex;
-  justify-content: center; /* centraliza horizontal */
+  justify-content: center;
   align-items: center;
-  gap: 0px; /* espaço entre ícones */
+  gap: 0px;
   margin-top: 20px;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .description {
   text-align: center;
   font-size: 1.2rem;
 }
+
+.cert-badge {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.cert-badge a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.cert-badge a:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.cert-badge img {
+  width: 42px;
+  height: auto;
+}
+
+
