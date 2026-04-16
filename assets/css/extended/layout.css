@@ -51,6 +51,22 @@
   margin: 25px 0;
 }
 
+.custom-content figure {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.custom-content figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-content figure figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
 /* code blocks */
 
 .custom-content pre {

@@ -2,16 +2,18 @@
 title: "Passive Recoinaissance Pipeline"
 tech: "Python, sh"
 description: "Multi-source OSINT pipeline with enrichment, correlation, and risk scoring"
-image: "/images/automated-report-project.png"
+image: "/images/passiverecon.png"
 layout: "simple"
-tags: ["python", "html", "css"]
+tags: ["Python", "HTML", "CSS"]
 ---
+<article>
 
+<header>
 <h1>Passive Recon Tool</h1>
 
 <p><strong>TL;DR:</strong> Passive OSINT pipeline that maps a domain’s attack surface without direct interaction, correlates multi-source data, and generates a structured risk-based security report.</p>
 
-{{< figure src="images/report-first-page.png" link="images/report-first-page.png" caption="Report First Page" >}}
+{{< figure src="images/report-first-page.png" caption="Report First Page" >}}
 
 I developed a passive reconnaissance pipeline capable of mapping a target domain’s attack surface using only publicly available data (OSINT).
 
@@ -26,6 +28,10 @@ This approach ensures:
 * No direct contact with the target
 * No legal or ethical risks
 * Real-world applicability in reconnaissance phases
+
+</header>
+
+<section id="tech-decisions">
 
 <h2>Technical Decisions</h2>
 
@@ -54,6 +60,10 @@ Several design choices were made to ensure reliability, scalability, and data co
 - <strong>Modular Architecture:</strong>  
   Each stage (collection, processing, enrichment, reporting) is isolated, enabling easy extension and maintenance.
 
+</section>
+
+<section id="objectives">
+
 <h2>Objectives</h2>
 
 This project was built with the following goals:
@@ -64,6 +74,9 @@ This project was built with the following goals:
 * Generate a clean and readable report for analysis
 * Simulate a real-world reconnaissance phase used in pentesting
 
+</section>
+
+<section id="key-concepts">
 
 <h2>Key Concepts</h2>
 
@@ -76,6 +89,9 @@ This project explores important cybersecurity concepts:
 * Infrastructure Enumeration
 * Risk Assessment Modeling
 
+</section>
+
+<section id="architecture">
 
 <h2>Architecture</h2>
 
@@ -116,6 +132,9 @@ The tool follows a modular pipeline:
 [Output Layer]
     └── HTML Report Generator
 ```
+</section>
+
+<section id="apis">
 
 <h2>External APIs Used</h2>
 <ul>
@@ -125,6 +144,9 @@ The tool follows a modular pipeline:
   <li><a href="https://web.archive.org/" class="link"><i class="fas fa-link"></i> Wayback Machine 🔗</a></li>
 </ul>
 
+</section>
+
+<section id="structure">
 
 <h2>Project Structure</h2>
 
@@ -140,6 +162,9 @@ The tool follows a modular pipeline:
     └── report_template_passive_css.html
 ```
 
+</section>
+
+<section id="data-collection">
 
 <h2>Data Collection Techniques</h2>
 
@@ -156,6 +181,9 @@ Used to extract:
 <strong>Security insight:</strong>
 Missing or obfuscated data may indicate privacy protection or misconfiguration.
 
+</section>
+
+<section id="passive-dns">
 
 <h2>2. Passive DNS</h2>
 
@@ -169,6 +197,9 @@ Helps identify infrastructure changes and potential shared hosting risks.
 
 {{< figure src="images/dns-records.png" link="images/dns-records.png" caption="DNS Records Section" >}}
 
+</section>
+
+<section id="subdomain-enum">
 
 <h2>3. Subdomain Enumeration</h2>
 
@@ -183,6 +214,9 @@ Subdomains like `dev`, `test`, or `admin` may expose sensitive environments.
 
 Analyzing the collected data reveals domain reuse of gabrielpassos.com through the observed dates.
 
+</section>
+
+<section id="infra-anal">
 
 <h2>4. Infrastructure Analysis</h2>
 
@@ -197,6 +231,9 @@ IP enrichment using external APIs:
 <strong>Security insight:</strong>
 Expands the attack surface visibility.
 
+</section>
+
+<section id="pub-dom-disc">
 
 <h2>5. Public Document Discovery</h2>
 
@@ -212,6 +249,9 @@ Documents may expose:
 * Software versions
 * Sensitive metadata
 
+</section>
+
+<section id="assess-model">
 
 <h2>Risk Assessment Model</h2>
 
@@ -245,6 +285,10 @@ The overall risk is calculated using an average-based scoring model:
 
 This approach provides a simple but effective way to prioritize potential risks based on aggregated indicators.
 
+</section>
+
+<section id="results">
+
 <h2>Results</h2>
 
 The tool successfully automates the reconnaissance workflow and produces a structured security report in a short time frame.
@@ -261,6 +305,10 @@ Execution is optimized through concurrency, allowing multiple enrichment and val
 
 The final output is a comprehensive HTML report that consolidates all findings into a readable and actionable format.
 
+</section>
+
+<section id="limitations">
+
 <h2>Limitations</h2>
 
 While effective, the tool has some limitations:
@@ -271,6 +319,10 @@ While effective, the tool has some limitations:
 - Risk scoring is heuristic-based and does not replace manual analysis
 
 These limitations reflect real-world constraints of passive reconnaissance techniques.
+
+</section>
+
+<section id="output">
 
 <h2>Output</h2>
 
@@ -287,6 +339,9 @@ The final output is an HTML report containing:
 
 <a href="/downloads/report.html" download class="link">Download HTML Report Example 🔗</a>
 
+</section>
+
+<section id="challenges">
 
 <h2>Key Challenges</h2>
 
@@ -298,6 +353,9 @@ During development, some challenges included:
 * Managing API failures and timeouts
 * Designing a clean and readable report
 
+</section>
+
+<section id="lessons">
 
 <h2>What I Learned</h2>
 
@@ -309,6 +367,9 @@ This project helped me improve:
 * Designing analysis pipelines
 * Thinking like an attacker during recon
 
+</section>
+
+<section id="improvements">
 
 <h2>Future Improvements</h2>
 
@@ -320,6 +381,9 @@ Planned enhancements:
 * Web-based interface
 * Caching for faster execution
 
+</section>
+
+<section id="considerations">
 
 <h2>Ethical Considerations</h2>
 
@@ -329,6 +393,9 @@ This tool operates strictly in a <strong>passive manner</strong>, meaning:
 * No scanning or exploitation
 * Only publicly available data is used
 
+</section>
+
+<section id="conclusion">
 
 <h2>Conclusion</h2>
 
@@ -343,16 +410,22 @@ Beyond data collection, the focus was on building a structured pipeline capable 
 
 This work reflects my ability to design scalable reconnaissance workflows and think in terms of attack surface analysis, a critical component in modern cybersecurity operations.
 
+</section>
+
+<section id="repo">
 
 <h2>Repository</h2>
 
 
 <a href="https://github.com/gabsteps/automated_report_scan" class="link"><i class="fas fa-link"></i> GitHub Repository Link Here 🔗</a></li>
 
+</section>
 
-
+<section id="credits">
 
 <h2>Author</h2>
 
 <h3>Gabriel Passos
 Cybersecurity Student & Security Enthusiast</h3>
+</section>
+</article>
