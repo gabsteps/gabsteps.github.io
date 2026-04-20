@@ -112,7 +112,7 @@ Custom internal portal that:
 </figure>
 
 <figure>
-    {{< figure src="/projects/homelab-siem/images/webappit.png" link="/projects/homelab-siem/images/webappdp.png" caption="Web App Directories" >}}
+    {{< figure src="/projects/homelab-siem/images/webappit.png" link="/projects/homelab-siem/images/webappit.png" caption="Web App Directories" >}}
 </figure>
 
 - Authenticates users against Active Directory  
@@ -127,7 +127,7 @@ This simulates a real <strong>intranet-style corporate application</strong>.
 Full <strong>Wazuh monitoring</strong> across the environment:
 
 <figure>
-    {{< figure src="/projects/homelab-siem/images/wazuhpanel.png" link="/projects/homelab-siem/images/webappdp.png" caption="Wazuh Dashboard" >}}
+    {{< figure src="/projects/homelab-siem/images/wazuhpanel.png" link="/projects/homelab-siem/images/wazuhpanel.png" caption="Wazuh Dashboard" >}}
 </figure>
 
 - Authentication and security logs from Active Directory  
@@ -146,7 +146,7 @@ Full <strong>Wazuh monitoring</strong> across the environment:
 The lab already supports detection of:
 
 <figure>
-    {{< figure src="/projects/homelab-siem/images/wazuhendpoints.png" link="/projects/homelab-siem/images/webappdp.png" caption="Wazuh Endpoints" >}}
+    {{< figure src="/projects/homelab-siem/images/wazuhendpoints.png" link="/projects/homelab-siem/images/wazuhendpoints.png" caption="Wazuh Endpoints" >}}
 </figure>
 
 - Failed logon attempts in Active Directory  
