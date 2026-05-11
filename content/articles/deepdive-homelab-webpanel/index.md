@@ -9,8 +9,11 @@ tags: ["LDAP", "SMB", "Flask", "Homelab", "Security Engineering", "Deep Dive"]
 <article>
 
 <header>
-
 <h1>Integrating a Web Panel with Active Directory and a File Server</h1>
+</header>
+
+<section id="intro">
+
 
 <h2>Challenges, Lessons Learned and Real-World Troubleshooting</h2>
 
@@ -19,8 +22,8 @@ One of the core goals of my homelab SOC project was to simulate a realistic corp
 This article is a deep dive into <strong>challenges</strong> faced while building the ADPanel — a Flask web application that authenticates users via LDAP and allows them to browse and download files from an SMB File Server.
 
 This turned out to be far more complex than writing the application
- 
-</header>
+</section>
+
 
 <section id="goal">
 
@@ -180,7 +183,7 @@ This step transformed the project from a simple web app into a <strong>real infr
 
 <section id="challenge3">
 
-<h2>Challenge 3 — Containerization and Debugging in Docker</h3>
+<h2>Challenge 3 — Containerization and Debugging in Docker</h2>
 
 Migrating the app to Docker improved portability but introduced new complexity.
 
