@@ -251,6 +251,7 @@ This project acts as the <strong>central hub</strong> for all technical deep div
 <nav>
 <ul>
 <li><a href="/articles/deepdive-homelab-webpanel/">WEB Panel integration with Active Directory 🔗</a></li>
+<li><a href="/articles/deepdive-homelab-webpanel-log-hardening//">Log Hardening 🔗</a></li>
 </ul>
 </nav>
 
