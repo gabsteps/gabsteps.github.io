@@ -1,3 +1,6 @@
+{{ define "head" }}
+  <meta name="keywords" content="SOC Analyst, Blue Team, Cybersecurity Portfolio, SIEM, Wazuh, Homelab SOC, CompTIA Security+, OSINT, Active Directory Security, Incident Response, Log Analysis, Python Cybersecurity, Hardening, English C1, Threat Detection, Vulnerability Management, Security Operations Center">
+{{ end }}
 {{ define "main" }}
 
 <div class="home-hero">
@@ -8,7 +11,7 @@
   </p>
 </div>
 <div class="description">
-  <h3>Cybersecurity Student<h3>
+  <h3>Defender in the Making<h3>
 </div>
 <div class="social-icons">
   <a href="https://github.com/gabsteps" target="_blank">
@@ -27,23 +30,100 @@
  </a>
 </div>
 
+<div class="home-pitch">
+  <p>Building my career in defensive security, one project at a time. My focus is on SOC analysis, threat detection, and log monitoring. This portfolio is where I turn theory into hands-on skill.</p>
+</div>
+
+<div class="featured-projects">
+  <h2>Featured Projects</h2>
+  <div class="project-cards">
+    
+    <a href="/projects/homelab-soc/" class="home-project-card">
+      <div class="card-header">
+        <span class="card-tag">Blue Team</span>
+      </div>
+      <h3>Homelab SOC: Wazuh SIEM & Active Directory</h3>
+      <p>Virtualized SOC environment with threat detection, log analysis, and Active Directory hardening using Wazuh and Docker.</p>
+      <span class="card-link">View Project →</span>
+    </a>
+
+    <a href="/projects/automated-scan/" class="home-project-card">
+      <div class="card-header">
+        <span class="card-tag">OSINT</span>
+      </div>
+      <h3>Passive Reconnaissance Pipeline</h3>
+      <p>Automated OSINT tool that maps attack surfaces using passive data collection, multi-source correlation, and risk scoring.</p>
+      <span class="card-link">View Project →</span>
+    </a>
+
+  </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const text = "Cybersecurity | Networking | Automation";
-  const speed = 95;
-  const element = document.getElementById("typing-text");
-  let i = 0;
+    const phrases = [
+        "SOC Analyst (Blue Team)",
+        "SIEM & Threat Detection",
+        "Incident Response",
+        "CompTIA Security+ Certified",
+        "Automation"
+    ];
 
-  function typeWriter() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
+  const element = document.getElementById("typing-text");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeSpeed = 80;
+  const deleteSpeed = 40;
+  const pauseBetween = 2000;
+
+  function startBlink() {
+    element.classList.add("blink");
+  }
+
+  function stopBlink() {
+    element.classList.remove("blink");
+  }
+
+  function typeLoop() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      // Escrevendo — cursor sólido
+      stopBlink();
+      element.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentPhrase.length) {
+        // Terminou de escrever — pausa com cursor piscando
+        isDeleting = true;
+        startBlink();
+        setTimeout(typeLoop, pauseBetween);
+        return;
+      }
+
+      setTimeout(typeLoop, typeSpeed);
+    } else {
+      // Apagando — cursor sólido
+      stopBlink();
+      element.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        // Terminou de apagar — troca de frase
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        stopBlink();
+        setTimeout(typeLoop, 400);
+        return;
+      }
+
+      setTimeout(typeLoop, deleteSpeed);
     }
   }
 
-  typeWriter();
+  startBlink();
+  setTimeout(typeLoop, 800);
 });
 </script>
 

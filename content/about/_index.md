@@ -3,33 +3,23 @@ title: "About"
 layout: "single"
 ---
 
-<h1>About</h1>
+<h1>About Me</h1>
 
 <p>
-Hi, my name is Gabriel Silva Passos and this is my personal blog under development.
-This website is my first step to create an online presence and to share my personal projects and achievements.
-I am graduating in Cybersecurity and currently I'm on my last term. I'm planning on getting my first security certification in april (CompTIA Security+).
+I'm Gabriel Passos, a cybersecurity student and aspiring SOC Analyst building my career in defensive security.
+
+My journey started in IT support and infrastructure, managing Active Directory, Azure AD, and corporate networks. That hands-on experience taught me how real environments work, and how to protect them.
+
+Today, I'm focused on Blue Team operations: SIEM monitoring, log analysis, threat detection, and incident response. I hold the CompTIA Security+ certification and I'm currently pursuing my degree in Cybersecurity at Universidade Vila Velha (UVV).
 </p>
 
-<h1>Interests</h1>
+<h2>What Drives Me</h2>
 
-<h3>Coding and automation</h3>
 <p>
-My most used programming languages are Python, C++ and Shell Script. Currently working on an automated security assessment reporting solution using Python and sh as a personal project.
+My most used programming languages are Python, C++ and Shell Script. Currently working on an automated security assessment reporting solution using Python and sh as a personal project.I believe security isn't just about tools, it's about understanding what you're defending. My background in infrastructure gives me that perspective. Every firewall rule, every access policy, every log entry tells part of a story. My job is to read it before an attacker does.
 </p>
 
-<h3>Networking</h3>
-<p>
-Most of my working experience involves network administration, so I developed a lot of interest in it. I'm planning to build a homelab soon.
-</p>
-
-<h3>Penetration Testing</h3>
-<p>Early development on my pentesting skills.</p>
-
-<h3>Reverse Engineering</h3>
-<p>I'm still exploring reverse engineering, but it seems interesting.</p>
-
-<h1>Certifications & Credentials</h1>
+<h2>Certifications & Credentials</h2>
 
 {{< cert 
   image="/images/comptia-security-ce-certification.png"

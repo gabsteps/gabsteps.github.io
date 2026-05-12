@@ -6,7 +6,7 @@ languageCode = "en"
 
 [params]
   author = "Gabriel S Passos"
-  description = "Cybersecurity blog about malware analysis, reverse engineering, security research and automation by Gabriel Passos"
+  description = "Cybersecurity portfolio of Gabriel Passos — SOC Analyst & Blue Team practitioner. Hands-on projects with Wazuh SIEM, Active Directory, OSINT automation, and Python. CompTIA Security+ certified. English C1."
   defaultTheme = "dark"
   disableThemeToggle = true
   ShowReadingTime = true
