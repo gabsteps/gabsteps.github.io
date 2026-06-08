@@ -1,12 +1,12 @@
 theme = "PaperMod"
 
-title = "Gabriel Passos | Cybersecurity Portfolio, SOC Analyst & Blue Team Projects"
+title = "Gabriel Passos"
 baseURL = "https://gabrielpassos.com/"
 languageCode = "en"
 
 [params]
   author = "Gabriel S Passos"
-  description = "Cybersecurity portfolio of Gabriel Passos — SOC Analyst & Blue Team practitioner. Hands-on projects with Wazuh SIEM, Active Directory, OSINT automation, and Python. CompTIA Security+ certified. English C1."
+  description = "Cybersecurity portfolio of Gabriel Passos — SOC Analyst & Blue Team practitioner. Hands-on projects with Wazuh SIEM, Active Directory, OSINT automation, and Python. CompTIA Security+ certified."
   defaultTheme = "dark"
   disableThemeToggle = true
   ShowReadingTime = true
