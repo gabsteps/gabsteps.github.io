@@ -76,8 +76,6 @@ tags: ["Logs", "Homelab", "Wazuh", "Deep Dive", "GPO"]
 
 <p>It adds critical visibility such as:</p>
 
-<p>It adds critical visibility such as:</p>
-
 <ul>
 <li><strong>Process Creation</strong> - Detects malware execution</li>
 <li><strong>Network Connections</strong> - Detects beaconing and command-and-control traffic</li>

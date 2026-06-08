@@ -1,5 +1,5 @@
 ---
-title: "Passive Recoinaissance Pipeline"
+title: "Passive Reconnaissance Pipeline"
 tech: "Python, sh"
 description: "Multi-source OSINT pipeline with enrichment, correlation, and risk scoring"
 image: "/images/passiverecon.png"
