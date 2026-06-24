@@ -2,11 +2,15 @@ theme = "PaperMod"
 
 title = "Gabriel Passos"
 baseURL = "https://gabrielpassos.com/"
-languageCode = "en"
+defaultContentLanguage = "en"
+locale = "en"
 
 [params]
+  env = "production"
   author = "Gabriel S Passos"
-  description = "Cybersecurity portfolio of Gabriel Passos — SOC Analyst & Blue Team practitioner. Hands-on projects with Wazuh SIEM, Active Directory, OSINT automation, and Python. CompTIA Security+ certified."
+  description = "Cybersecurity portfolio of Gabriel Passos, a defender in the making focused on SOC analysis, Blue Team operations, incident response, threat detection, and hands-on security projects."
+  keywords = ["SOC Analyst", "Blue Team", "Cybersecurity Portfolio", "SIEM", "Wazuh", "Homelab SOC", "CompTIA Security+", "OSINT", "Active Directory Security", "Incident Response", "Log Analysis", "Python Cybersecurity", "Hardening", "Threat Detection", "Vulnerability Management", "Security Operations Center"]
+  images = ["images/profile.png"]
   defaultTheme = "dark"
   disableThemeToggle = true
   ShowReadingTime = true
@@ -42,4 +46,7 @@ languageCode = "en"
     name = 'My Projects'
     pageRef = '/projects/'
     weight = 40
-
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact/'
+    weight = 50

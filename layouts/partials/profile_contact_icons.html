@@ -1,0 +1,24 @@
+{{- $className := .className | default "social-icons" -}}
+{{- $links := slice -}}
+{{- if .includeEmail -}}
+  {{- $links = $links | append (dict "label" "Send email" "url" "mailto:gabriel-silva23@outlook.com" "icon" "email") -}}
+  {{- $links = $links | append (dict "label" "LinkedIn profile" "url" "https://linkedin.com/in/gabriel-silva-passos-ab7779ab/" "icon" "linkedin" "external" true) -}}
+  {{- $links = $links | append (dict "label" "GitHub profile" "url" "https://github.com/gabsteps" "icon" "github" "external" true) -}}
+{{- else -}}
+  {{- $links = $links | append (dict "label" "GitHub profile" "url" "https://github.com/gabsteps" "icon" "github" "external" true) -}}
+  {{- $links = $links | append (dict "label" "LinkedIn profile" "url" "https://linkedin.com/in/gabriel-silva-passos-ab7779ab/" "icon" "linkedin" "external" true) -}}
+{{- end -}}
+{{- $links = $links | append (dict "label" "Hack The Box profile" "url" "https://app.hackthebox.com/users/1883145" "image" "/images/hackthebox-svgrepo-com.svg" "external" true) -}}
+{{- $links = $links | append (dict "label" "TryHackMe profile" "url" "https://tryhackme.com/p/akat0sh" "image" "/images/tryhackme.svg" "external" true) -}}
+
+<div class="{{ $className }}">
+  {{- range $links }}
+    <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }} aria-label="{{ .label }}">
+      {{- if .icon }}
+        {{ partial "svg.html" (dict "name" .icon) }}
+      {{- else }}
+        <img class="social-icon-img" src="{{ .image }}" alt="" aria-hidden="true">
+      {{- end }}
+    </a>
+  {{- end }}
+</div>

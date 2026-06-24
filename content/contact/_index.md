@@ -1,12 +1,27 @@
-<h1>Contact page</h1>
+---
+title: "Contact"
+description: "Contact Gabriel Passos for cybersecurity, infrastructure, Blue Team, SOC, incident response, and technical collaboration opportunities."
+summary: "Get in touch for cybersecurity, infrastructure, Blue Team, SOC, incident response, and technical collaboration opportunities."
+layout: "single"
+keywords: ["Contact", "Cybersecurity", "Infrastructure", "SOC Analyst", "Blue Team", "Incident Response", "Technical Collaboration", "Networking"]
+cover:
+  image: "/images/profile.png"
+og_type: "website"
+---
 
+<section class="contact-section">
+<div class="contact-card">
+<h1>Contact</h1>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1QTPR27FK7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<p>
+Get in touch for professional opportunities, cybersecurity projects,
+technical collaboration, or networking.
+</p>
 
-  gtag('config', 'G-1QTPR27FK7');
-</script>
+{{< contact-icons >}}
+
+<p class="contact-note">
+I am open to cybersecurity, infrastructure, Blue Team, SOC, and incident response opportunities.
+</p>
+</div>
+</section>

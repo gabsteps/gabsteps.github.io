@@ -1,37 +1,28 @@
-{{ define "head" }}
-  <meta name="keywords" content="SOC Analyst, Blue Team, Cybersecurity Portfolio, SIEM, Wazuh, Homelab SOC, CompTIA Security+, OSINT, Active Directory Security, Incident Response, Log Analysis, Python Cybersecurity, Hardening, English C1, Threat Detection, Vulnerability Management, Security Operations Center">
-{{ end }}
 {{ define "main" }}
 
 <div class="home-hero">
-  <img src="/images/profile.png" alt="My profile picture">
+  <img src="/images/profile.png" alt="Gabriel Passos profile picture">
+
+  <h1>Gabriel Passos</h1>
 
   <p class="typing">
     <span id="typing-text"></span>
   </p>
 </div>
 <div class="description">
-  <h3>Defender in the Making<h3>
+  <h2>Defender in the Making</h2>
 </div>
-<div class="social-icons">
-  <a href="https://github.com/gabsteps" target="_blank">
-    {{ partial "svg.html" (dict "name" "github") }}
-  </a>
-
-  <a href="https://linkedin.com/in/gabriel-silva-passos-ab7779ab/" target="_blank">
-    {{ partial "svg.html" (dict "name" "linkedin") }}
-  </a>
-</div>
+{{ partial "profile_contact_icons.html" (dict "className" "social-icons") }}
 
 <div class="cert-badge">
- <a href= "https://www.credly.com/badges/6d5a26e1-b05a-4d43-9a75-703874bc0a70/public_url" target="_blank">
-  <img src="/images/comptia-security-ce-certification.png" alt="sec plus certification badge">
+ <a href="https://www.credly.com/badges/6d5a26e1-b05a-4d43-9a75-703874bc0a70/public_url" target="_blank" rel="noopener noreferrer" aria-label="CompTIA Security+ certification badge">
+  <img src="/images/comptia-security-ce-certification.png" alt="CompTIA Security+ certification badge">
   <span>Security+ Certified</span> 
  </a>
 </div>
 
 <div class="home-pitch">
-  <p>Building my career in defensive security, one project at a time. My focus is on SOC analysis, threat detection, and log monitoring. This portfolio is where I turn theory into hands-on skill.</p>
+  <p>Building my career in cybersecurity and defensive security, one project at a time. My focus is on SOC analysis, Blue Team operations, incident response, threat detection, and log monitoring. This portfolio is where I turn theory into hands-on skill.</p>
 </div>
 
 <div class="featured-projects">
@@ -89,13 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPhrase = phrases[phraseIndex];
 
     if (!isDeleting) {
-      // Escrevendo — cursor sólido
+      // Typing with a steady cursor.
       stopBlink();
       element.textContent = currentPhrase.substring(0, charIndex + 1);
       charIndex++;
 
       if (charIndex === currentPhrase.length) {
-        // Terminou de escrever — pausa com cursor piscando
+        // Pause with a blinking cursor after typing a phrase.
         isDeleting = true;
         startBlink();
         setTimeout(typeLoop, pauseBetween);
@@ -104,13 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(typeLoop, typeSpeed);
     } else {
-      // Apagando — cursor sólido
+      // Deleting with a steady cursor.
       stopBlink();
       element.textContent = currentPhrase.substring(0, charIndex - 1);
       charIndex--;
 
       if (charIndex === 0) {
-        // Terminou de apagar — troca de frase
+        // Move to the next phrase after the current one is deleted.
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
         stopBlink();

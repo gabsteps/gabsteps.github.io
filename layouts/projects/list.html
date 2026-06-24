@@ -5,7 +5,9 @@
   <div class="project-card">
 
     {{ if .Params.image }}
-      <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      <div class="project-cover{{ with .Params.image_fit }} project-cover--{{ . }}{{ end }}">
+        <img src="{{ .Params.image }}" alt="{{ .Title }} cover image" loading="lazy">
+      </div>
     {{ end }}
 
     <h3>{{ .Title }}</h3>
@@ -21,7 +23,7 @@
     {{ end }}
 
     <p class="project-description">
-      {{ .Params.description }}
+      {{ .Params.card_description | default .Params.description }}
     </p>
 
     <a class="project-btn" href="{{ .RelPermalink }}">

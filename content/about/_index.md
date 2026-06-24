@@ -1,5 +1,7 @@
 ---
 title: "About"
+description: "About Gabriel Passos, a cybersecurity student focused on SOC analysis, Blue Team operations, SIEM monitoring, and incident response."
+summary: "About Gabriel Passos and his defensive security background."
 layout: "single"
 ---
 
@@ -28,5 +30,4 @@ My most used programming languages are Python, C++ and Shell Script. Currently w
   items="Access Control|CompTIA|Cryptography|Cyber Forensics|Data Security|Disaster Recovery Planning|Firewall Configuration|Information Security Management|Malware Identification|Mobile Device Security|Network Security|Security Awareness|Security Configuration|Security Management|Security Policies|Threat Detection|Threat Management"
   link="https://www.credly.com/badges/6d5a26e1-b05a-4d43-9a75-703874bc0a70/public_url"
 >}}
-
 

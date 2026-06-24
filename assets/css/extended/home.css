@@ -11,6 +11,14 @@
   margin-bottom: 1rem;
 }
 
+.home-hero h1 {
+  margin: 0 0 0.6rem;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
 .home-hero p {
   text-align: center;
   font-size: 1.8rem;
@@ -37,7 +45,8 @@
   25%, 75% { opacity: 0; }
 }
 
-.social-icons {
+.social-icons,
+.contact-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +54,18 @@
   margin-top: 20px;
 }
 
-.social-icons a:hover {
+.social-icons .social-icon-img,
+.contact-icons .social-icon-img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.social-icons a:hover,
+.contact-icons a:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -53,6 +73,12 @@
 .description {
   text-align: center;
   font-size: 1.2rem;
+}
+
+.description h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .cert-badge {
@@ -88,7 +114,6 @@
   max-width: 800px;
   margin: 3rem auto 2rem;
   padding: 0 1.5rem;
-  margin: 3rem auto 2rem;
 }
 
 .featured-projects h2 {
@@ -207,7 +232,6 @@
 
 .home-pitch {
   max-width: 700px;
-  margin: 2rem auto 2.5rem;
   padding: 0 1.5rem;
   text-align: center;
   margin: 2.5rem auto 3rem;
